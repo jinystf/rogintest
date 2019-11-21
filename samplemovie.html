@@ -6,11 +6,13 @@
 <!-- Vue.js を読み込む -->
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <link rel="stylesheet" type="text/css" href="css/base.css">
-
+<link href="http://vjs.zencdn.net/5.10.8/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 </head>
 <h1>ＳＴＶ動画コンテンツ</h1>
-<p>コンテンツを選択してください</p>
+<p>お客様情報、決済情報を入力してください</p>
 
+<h3>動画１：滝</h3>
 <video style="width:100%;" src="sample.mp4" v-play="hoge"></video>
 
 <p>再生される場合、下の購入ボタンで動画を閲覧できます</p>
@@ -27,7 +29,7 @@ Vue.directive('play',function (el, binding) {
     }
 });
 
-var buy = { template: '<input class="button buy" type="button" value="購入する" onclick="">' }
+var buy = { template: '<input class="button buy" type="button" value="動画１：滝を購入する" onclick="">' }
 var login = new Vue({
   el: '#buy',
   components: {
@@ -35,5 +37,6 @@ var login = new Vue({
   }
 })
 </script>
+<script src="http://vjs.zencdn.net/5.10.8/video.js"></script>
 </body>
 </html>
