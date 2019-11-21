@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue TEST</title>
+<!-- Vue.js を読み込む -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+
+</head>
+<h1>ＳＴＶ動画コンテンツ</h1>
+<p>ログイン方法を選択してください</p>
+
+<div id="howtologin">
+  <howto1></howto1>
+  <howto2></howto2>
+  <howto3></howto3>
+</div>
+
+<script>
+var login1 = { template: '<input class="button googleback" type="button" value="googleでログイン" onclick="">' }
+var login2 = { template: '<input class="button facebookback" type="button" value="FACEBOOKでログイン" onclick="">' }
+var login3 = { template: '<input class="button twitterback" type="button" value="twitterでログイン" onclick="">' }
+var login = new Vue({
+  el: '#howtologin',
+  components: {
+    'howto1': login1,
+    'howto2': login2,
+    'howto3': login3
+  }
+})
+</script>
+</body>
+</html>
