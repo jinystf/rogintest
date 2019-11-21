@@ -1,0 +1,5 @@
+h1{text-align:center; color:#E50011;border-top:solid 2px #e50011;border-bottom:solid 2px #e50011;}
+.button {font-size:16px;font-weight:bold;padding:10px;margin-bottom:10px;width:100%;}
+.googleback{color:#111111; background:#ffffff 10px center no-repeat url("../img/google.png")}
+.facebookback{color:#ffffff;background:#3b5998 10px center no-repeat url("../img/facebook.png");}
+.twitterback{color:#ffffff;background:#55acee 10px center no-repeat url("../img/twitter.png");}
