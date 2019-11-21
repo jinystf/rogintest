@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue TESTログイン後画面</title>
+<!-- Vue.js を読み込む -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+
+</head>
+<h1>ＳＴＶ動画コンテンツ</h1>
+<p>コンテンツを選択してください</p>
+
+<video style="width:100%;" src="sample.mp4" v-play="hoge"></video>
+
+<p>再生される場合、下の購入ボタンで動画を閲覧できます</p>
+<div id="buy">
+  <buy1></buy1>
+</div>
+
+<script>
+Vue.directive('play',function (el, binding) {
+    if(binding.value){
+        el.play();
+    }else{
+        el.pause();
+    }
+});
+
+var buy = { template: '<input class="button buy" type="button" value="購入する" onclick="">' }
+var login = new Vue({
+  el: '#buy',
+  components: {
+    'buy1': buy,
+  }
+})
+</script>
+</body>
+</html>
